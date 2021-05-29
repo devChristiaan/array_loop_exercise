@@ -19,8 +19,11 @@ $(function() {
     }
 
     // Finally use jQuery to dump your html into the unordered list above
-    $('.fruits').on('load', function(){
-
+    $(document).ready(function(){
+      let fruitItems = sort(fruit)
+      fruitItems.forEach(item => {
+        $(this).append(item)
+      })
     })
 
   // BONUS: When you click a fruit, it should be removed from the list
