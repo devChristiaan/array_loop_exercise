@@ -14,22 +14,22 @@ $(function() {
 
       let htmlElements = []
       newFruitArray.forEach((fruit) =>{
-        htmlElements.push("<li class='fruitItem'>" + fruit + "</li>")
+        htmlElements.push("<li>" + fruit + "</li>")
       })
 
-      console.log(htmlElements);
-      
       return htmlElements
     }
 
     // Finally use jQuery to dump your html into the unordered list above
-    $(document).ready(function(){
+     (function (){
       let fruitItems = sort(fruit)
       fruitItems.forEach(item => {
         $(".fruits").append(item)
       })
-    })
-
+    })()
   // BONUS: When you click a fruit, it should be removed from the list
+  $('ul li').on('click', function (){
+    $(this).remove()
+  })
 
 });
