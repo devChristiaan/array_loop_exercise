@@ -26,7 +26,7 @@ $(function() {
     $(document).ready(function(){
       let fruitItems = sort(fruit)
       fruitItems.forEach(item => {
-        $(this).append(item)
+        $(".fruits").append(item)
       })
     })
 
